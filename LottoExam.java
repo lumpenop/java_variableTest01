@@ -7,12 +7,12 @@ public class LottoExam{
         int len = arr.length;
         int bin = 0;
 
-        for(int j=0; j<len; j++){
-            for(int i=j+1; i<len; i++){
-                if(arr[j] < arr[i]){
+        for(int j=len-1; j>0; j--){
+            for(int i=0; i<j; i++){
+                if(arr[i] < arr[i+1]){
                     bin = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = bin;
+                    arr[i] = arr[i+1];
+                    arr[i+1] = bin;
                 }
             }
         }
@@ -55,10 +55,15 @@ public class LottoExam{
         
         LottoExam le = new LottoExam();
 
-        for(int i=0; i<5; i++){
-            int arr[] = le.allNumber();
-            arr = le.Sort(arr);
-            le.printArr(arr);    
-        }
+        // for(int i=0; i<5; i++){
+        //     int arr[] = le.allNumber();
+        //     arr = le.Sort(arr);
+        //     le.printArr(arr);    
+        // }
+
+        int arr[] = le.allNumber();
+        le.printArr(arr);  
+        arr = le.Sort(arr);
+        le.printArr(arr);  
     }
 }

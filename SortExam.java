@@ -4,14 +4,14 @@ public class SortExam{
         int len = arr.length-1;
         int bin = 0;
 
-        for(int j=0; j<len-1; j++){
+        for(int j=len; j>0; j--){
 
-            for(int i=j+1; i<len; i++){
+            for(int i=0; i<j; i++){
                 
-                if(arr[j] > arr[i]){
+                if(arr[i] > arr[i+1]){
                     bin = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = bin;
+                    arr[i] = arr[i+1];
+                    arr[i+1] = bin;
                 }
             }
         }
