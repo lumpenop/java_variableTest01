@@ -1,4 +1,3 @@
-import java.util.Random;
 
 public class LottoExam{
     
@@ -25,7 +24,7 @@ public class LottoExam{
         boolean flag = true;
 
         for(int i=0; i<6; i++){
-            int randNum = new Random().nextInt(45) + 1;
+            int randNum = (int)(Math.random()*45) + 1;
             if(!isDuplication(randNum, arr, i)){
                 arr[i] = randNum;
             }else{
