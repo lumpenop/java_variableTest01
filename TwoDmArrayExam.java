@@ -33,12 +33,14 @@ class TwoDmArray{
 
     public void print2DmArray(){
         for(int i=0; i<twoDmArray.length;i++){
-            if(i>0){
-                    System.out.print(String.format("%" + i + "s"," "));
+
+            for(int j=0; j<i; j++){
+                System.out.print("\t"); 
             }
+            
             for(int j=i; j<twoDmArray.length; j++){
                 
-                System.out.print(twoDmArray[j][i] + " ");
+                System.out.print(twoDmArray[j][i] + "\t");
                 if(j == 9){
                     System.out.println("");
                 }
